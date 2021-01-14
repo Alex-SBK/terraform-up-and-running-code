@@ -12,7 +12,7 @@ provider "aws" {
 resource "aws_instance" "app" {
   instance_type     = "t2.micro"
   availability_zone = "us-east-2a"
-  ami               = "ami-0c55b159cbfafe1f0"
+  ami               = "ami-0e1ce3e0deb8896d2"
 
   user_data = <<-EOF
               #!/bin/bash

@@ -11,14 +11,14 @@ provider "aws" {
 
 resource "aws_instance" "example_1" {
   count         = 3
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-0e1ce3e0deb8896d2"
   instance_type = "t2.micro"
 }
 
 resource "aws_instance" "example_2" {
   count             = length(data.aws_availability_zones.all.names)
   availability_zone = data.aws_availability_zones.all.names[count.index]
-  ami               = "ami-0c55b159cbfafe1f0"
+  ami               = "ami-0e1ce3e0deb8896d2"
   instance_type     = "t2.micro"
 }
 

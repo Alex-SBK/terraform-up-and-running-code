@@ -21,7 +21,7 @@ resource "aws_key_pair" "generated_key" {
 }
 
 resource "aws_instance" "example" {
-  ami                    = "ami-0c55b159cbfafe1f0"
+  ami                    = "ami-0e1ce3e0deb8896d2"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
   key_name               = aws_key_pair.generated_key.key_name

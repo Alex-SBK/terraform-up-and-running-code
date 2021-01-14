@@ -14,7 +14,7 @@ module "asg" {
 
   cluster_name  = var.cluster_name
 
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-0e1ce3e0deb8896d2"
   instance_type = "t2.micro"
 
   min_size           = 1
