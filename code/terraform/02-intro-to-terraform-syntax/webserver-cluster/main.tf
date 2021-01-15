@@ -55,14 +55,16 @@ resource "aws_security_group" "instance" {
   }
 }
 
+# создаем датасорс aws_vpc с именем default
+# и затем фильтруем все впцшки  укоторых дефолт = тру
 data "aws_vpc" "default" {
-  default = true
+  default = true # Filter
 }
 
-# subnets IDS in data source
-
+# а теперь из прошлого датасорса ищем деволтный id
+# и запихиваем его в другой дата сорс
 data "aws_subnet_ids" "default" {
-  vpc_id = data.aws_vpc.default.id
+  vpc_id = data.aws_vpc.default.id # Filter
 }
 
 resource "aws_lb" "example" {
